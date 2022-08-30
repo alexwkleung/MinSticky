@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('./fonts/Inter-Bold.ttf');
+}
+
+body {
+    background-color: rgb(86, 86, 86);
+}
+
+#app {
+    margin-top: 10vh;
+}
+
+#save {
+    all: revert;
+    left: 632px;
+    top: 18px;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+}
+
+#normal {
+    all: revert;
+    left: 632px;
+    top: 18px;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+}
+
+#bold {
+    all: revert;
+    left: 632px;
+    top: 18px;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+}
+
+b {
+    font-family: 'Inter-Bold', 'sans-serif';
+}
+
+#italic {
+    all: revert;
+    left: 632px;
+    top: 18px;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+}
+
+#underline {
+    all: revert;
+    left: 632px;
+    top: 18px;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+}
+
+.stickyContainer {
+    margin-top: 200px;
+    display: block;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#sticky {
+    width: 350px;
+    height: 200px;
+    resize: none;
+    background-color: rgb(238, 238, 154);
+    font-size: 15px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    font-family: 'Inter-Regular', 'sans-serif';
+    padding-left: 5px;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+
+#sticky:focus {
+    /*outline-color: rgb(83, 83, 57);*/
+    outline: none;
+}
