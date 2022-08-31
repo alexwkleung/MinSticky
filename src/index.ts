@@ -32,16 +32,19 @@ function stickies() {
         document.execCommand("removeFormat", false);
     });
 
+    //bold formatting
     const bold = document.getElementById('bold') as HTMLElement;
     bold.addEventListener('click', (): void => {
         document.execCommand("bold", false);
     });
 
+    //italic formatting
     const italic = document.getElementById('italic') as HTMLElement;
     italic.addEventListener('click', (): void => {
         document.execCommand("italic", false);
     });
 
+    //underline formatting
     const underline = document.getElementById('underline') as HTMLElement;
     underline.addEventListener('click', (): void => {
         document.execCommand("underline", false);
