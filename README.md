@@ -8,7 +8,7 @@ Written in TypeScript. Icons are from Material Symbols.
 
 WIP.
 
-Do not use this for permanent text saving. This is merely meant for copy and pasting down temporary things like links and very small notes. No personal or important information should be written as there is a high chance of losing your data.
+Do not use this for permanent text saving. This is merely meant for copy and pasting down temporary things like website links and very small notes. No personal or important information should be written as there is a high chance of losing your data.
 
 # Saving and Formatting
 
