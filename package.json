@@ -1,5 +1,5 @@
 {
-  "name": "minstickies",
+  "name": "minsticky",
   "version": "1.0.0",
   "description": "",
   "main": "",
@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/alexwkleung/MinStickies#readme",
   "dependencies": {
+    "file-saver": "^2.0.5",
     "typescript": "^4.8.2"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "vite": "^3.0.9"
   }
 }

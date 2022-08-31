@@ -10,34 +10,40 @@
 
 body {
     background-color: rgb(86, 86, 86);
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-#app {
-    margin-top: 10vh;
+#buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 #save {
     all: revert;
-    left: 632px;
-    top: 18px;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
+}
+
+#app {
+    margin-top: 15px;
 }
 
 #normal {
     all: revert;
-    left: 632px;
-    top: 18px;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
 }
 
 #bold {
     all: revert;
-    left: 632px;
-    top: 18px;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
 }
 
 b {
@@ -46,37 +52,35 @@ b {
 
 #italic {
     all: revert;
-    left: 632px;
-    top: 18px;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
 }
 
 #underline {
     all: revert;
-    left: 632px;
-    top: 18px;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
 }
 
-.stickyContainer {
+#stickyContainer {
     margin-top: 200px;
     display: block;
-    width: 350px;
-    height: 200px;
+    width: 800px;
+    height: 690px;
     margin: 0 auto;
 }
 
 #sticky {
-    width: 350px;
-    height: 200px;
+    width: 800px;
+    height: 690px;
     resize: none;
     background-color: rgb(238, 238, 154);
-    font-size: 15px;
+    font-size: 20px;
     margin: 0 auto;
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: 'Inter-Regular', 'sans-serif';
     padding-left: 5px;
     padding-top: 5px;
@@ -84,6 +88,5 @@ b {
 }
 
 #sticky:focus {
-    /*outline-color: rgb(83, 83, 57);*/
     outline: none;
 }
