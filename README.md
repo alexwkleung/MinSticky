@@ -14,7 +14,7 @@ Do not use this for permanent text saving. This is merely meant for copy and pas
 
 There are two save options.
 
-1) The save icon is the standard save text function. This will save your text as a `.txt` file. Be careful if you reload your browser, since you'll lose all changes since there is no persistent storage at the moment.
+1) The save icon is the standard save text function. This will save your text as a `.txt` file. Be careful if you reload your browser, since you'll lose all changes as there is no persistent storage at the moment.
  
 2) The sync icon is the save syncing function. You'll have to click on the sync icon initially to create a `.txt` file (saved in the directory of your choice), and it will automatically save changes to the file when you write in the sticky note text area. Once you close the tab, save syncing will stop. Be careful if you reload your browser since you'll stop syncing changes.
 
