@@ -5,7 +5,7 @@ function stickies() {
     const app = document.getElementById('app') as HTMLElement;
 
     //sticky notes list array
-    const stickyNote = [
+    const stickyNote: string[] = [
         `
         <div id="buttonsContainer">
             <button id="save"><img src="/assets/save.png"></button>
