@@ -56,7 +56,7 @@ function stickies() {
 
     //save text from stickies to .txt when save button is clicked
     save.onclick = (): void => {
-        const blob = new Blob([sticky.innerText as string], { type: "text/plain; charset=utf-8" });
+        const blob: Blob = new Blob([sticky.innerText as string], { type: "text/plain; charset=utf-8" });
 
         saveAs(blob, "minsticky.txt");
     }
@@ -68,8 +68,8 @@ function stickies() {
             createFile = await (window).showSaveFilePicker({
                 suggestedName: 'minsticky.txt'
             });
-            const file = await createFile.getFile();
-            const content = await file.text();
+            const file: File = await createFile.getFile();
+            const content: string = await file.text();
         } catch (e) {
             console.error(e);
         }
@@ -78,7 +78,7 @@ function stickies() {
     (document.getElementById('sticky') as HTMLElement).addEventListener('keyup', async (e) => {
         if(typeof createFile !== 'undefined') {
             if((await createFile.queryPermission()) === 'granted') {
-                const writable = await createFile.createWritable();
+                const writable: FileSystemWritableFileStream = await createFile.createWritable();
                 await writable.write(sticky.innerText as string);
                 await writable.close();
             }
