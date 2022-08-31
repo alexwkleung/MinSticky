@@ -1,1 +1,1 @@
-# MinStickies
+# MinSticky
