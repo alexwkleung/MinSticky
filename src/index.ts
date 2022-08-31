@@ -9,6 +9,7 @@ function stickies() {
         `
         <div id="buttonsContainer">
             <button id="save"><img src="/assets/save.png"></button>
+            <button id="savesync"><img src="/assets/savesync.png"></button>
             <button id="normal"><img src="/assets/normal.png"></button>
             <button id="bold"><img src="/assets/bold.png"></button>
             <button id="italic"><img src="/assets/italic.png"></button>
@@ -55,9 +56,63 @@ function stickies() {
 
     //save text from stickies to .txt when save button is clicked
     save.onclick = (): void => {
-        const blob = new Blob([sticky.textContent as string], { type: "text/plain; charset=utf-8" });
+        const blob = new Blob([sticky.innerText as string], { type: "text/plain; charset=utf-8" });
 
         saveAs(blob, "minsticky.txt");
+    }
+
+    //save syncing 
+    let createFile: FileSystemFileHandle;
+    (document.getElementById('savesync') as HTMLElement).addEventListener('click', async () => {
+        try { 
+            createFile = await (window).showSaveFilePicker({
+                suggestedName: 'minsticky.txt'
+            });
+            const file = await createFile.getFile();
+            const content = await file.text();
+        } catch (e) {
+            console.error(e);
+        }
+    });
+
+    (document.getElementById('sticky') as HTMLElement).addEventListener('keyup', async (e) => {
+        if(typeof createFile !== 'undefined') {
+            if((await createFile.queryPermission()) === 'granted') {
+                const writable = await createFile.createWritable();
+                await writable.write(sticky.innerText as string);
+                await writable.close();
+            }
+        }
+    });
+
+    //disable drag for save button
+    (document.getElementById('save') as HTMLElement).onmousedown = () => { 
+        return false 
+    };
+
+    //disable drag for save sync button
+    (document.getElementById('savesync') as HTMLElement).onmousedown = () => {
+        return false;
+    }
+
+    //disable drag for normal button
+    (document.getElementById('normal') as HTMLElement).onmousedown = () => {
+        return false;
+    }
+
+    //disable drag for bold button
+    (document.getElementById('bold') as HTMLElement).onmousedown = () => {
+        return false;
+    }
+
+    //disable drag for italic button
+    (document.getElementById('italic') as HTMLElement).onmousedown = () => {
+        return false;
+    }
+
+    //disable drag for underline button
+    (document.getElementById('underline') as HTMLElement).onmousedown = () => {
+        return false;
     }
 }
 stickies();

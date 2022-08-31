@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/alexwkleung/MinStickies#readme",
   "dependencies": {
+    "@types/wicg-file-system-access": "^2020.9.5",
     "file-saver": "^2.0.5",
     "typescript": "^4.8.2"
   },

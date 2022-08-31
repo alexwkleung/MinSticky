@@ -14,6 +14,10 @@ body {
     overflow-x: hidden;
 }
 
+#app {
+    margin-top: 15px;
+}
+
 #buttonsContainer {
     display: flex;
     align-items: center;
@@ -28,8 +32,11 @@ body {
     font-size: 20px;
 }
 
-#app {
-    margin-top: 15px;
+#savesync {
+    all: revert;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
 }
 
 #normal {
