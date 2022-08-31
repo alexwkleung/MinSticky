@@ -87,7 +87,7 @@ function stickies() {
 
     //disable drag for save button
     (document.getElementById('save') as HTMLElement).onmousedown = () => { 
-        return false 
+        return false;
     };
 
     //disable drag for save sync button
