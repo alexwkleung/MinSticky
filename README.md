@@ -2,7 +2,7 @@
 
 ![minsticky](./img/minsticky.png)
 
-A single page sticky note with formatting options. 
+A single page sticky note with formatting options. Replicates a WYSIWYG style of text formatting.
 
 Written in TypeScript. Icons are from Material Symbols.
 
