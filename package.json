@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexwkleung/MinStickies.git"
+    "url": "git+https://github.com/alexwkleung/MinSticky.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexwkleung/MinStickies/issues"
+    "url": "https://github.com/alexwkleung/MinSticky/issues"
   },
-  "homepage": "https://github.com/alexwkleung/MinStickies#readme",
+  "homepage": "https://github.com/alexwkleung/MinSticky#readme",
   "dependencies": {
     "@types/wicg-file-system-access": "^2020.9.5",
     "file-saver": "^2.0.5",
