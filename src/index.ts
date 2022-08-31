@@ -8,11 +8,11 @@ function stickies() {
     const stickyNote = [
         `
         <div id="buttonsContainer">
-            <button id="save"><img src="src/icons/save.png"></button>
-            <button id="normal"><img src="src/icons/normal.png"></button>
-            <button id="bold"><img src="src/icons/bold.png"></button>
-            <button id="italic"><img src="src/icons/italic.png"></button>
-            <button id="underline"><img src="src/icons/underline.png"></button>
+            <button id="save"><img src="/assets/save.png"></button>
+            <button id="normal"><img src="/assets/normal.png"></button>
+            <button id="bold"><img src="/assets/bold.png"></button>
+            <button id="italic"><img src="/assets/italic.png"></button>
+            <button id="underline"><img src="/assets/underline.png"></button>
         </div>
 
         <div id="stickyContainer">
