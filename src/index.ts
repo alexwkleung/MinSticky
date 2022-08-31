@@ -55,7 +55,7 @@ function stickies() {
 
     //save text from stickies to .txt when save button is clicked
     save.onclick = (): void => {
-        const blob = new Blob([sticky.textContent as string], { type: "text/plain; charset=utf-8"});
+        const blob = new Blob([sticky.textContent as string], { type: "text/plain; charset=utf-8" });
 
         saveAs(blob, "minsticky.txt");
     }
