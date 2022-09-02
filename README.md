@@ -22,7 +22,7 @@ You can also open a file.
 
 1) The third icon is the open syncing function. You'll have to click on the third icon initially to open a file (preferrably a `.txt` file), and open the contents into the sticky note text area if there are any. It automatically saves changes to the opened file when you write in the sticky note text area. Once you close the tab, the syncing will stop. Be careful if you reload your browser since you'll stop syncing changes as well since there is no persistent storage at the moment.
 
-**Note:** The save and open syncing is done by the File System Access API, so you will need a browser that supports it to benefit from the features. A Chromium-based browser (i.e., Chrome, Edge, etc) is preferred.
+**Note:** The save and open syncing is done by the File System Access API, so you will need a browser that supports it to benefit from the features. A Chromium-based browser (i.e., Chrome, Edge, etc) is recommended.
 
 Files are plain text only and any rich text formatting (bold, italic, underline, etc) will not be included in both opening and saving.
 
