@@ -32,7 +32,14 @@ body {
     font-size: 20px;
 }
 
-#savesync {
+#saveas {
+    all: revert;
+    position: relative;
+    font-family: 'Inter-Regular', 'sans-serif';
+    font-size: 20px;
+}
+
+#open {
     all: revert;
     position: relative;
     font-family: 'Inter-Regular', 'sans-serif';

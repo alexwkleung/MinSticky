@@ -9,7 +9,8 @@ function stickies() {
         `
         <div id="buttonsContainer">
             <button id="save"><img src="/assets/save.png"></button>
-            <button id="savesync"><img src="/assets/savesync.png"></button>
+            <button id="saveas"><img src="/assets/saveas.png"></button>
+            <button id="open"><img src="/assets/open.png"></button>
             <button id="normal"><img src="/assets/normal.png"></button>
             <button id="bold"><img src="/assets/bold.png"></button>
             <button id="italic"><img src="/assets/italic.png"></button>
@@ -52,18 +53,13 @@ function stickies() {
     });
 
     const save = document.getElementById('save') as HTMLElement;
+    const saveas = document.getElementById('saveas') as HTMLElement;
+    const open = document.getElementById('open') as HTMLElement;
     const sticky = document.getElementById('sticky') as HTMLElement;
-
-    //save text from stickies to .txt when save button is clicked
-    save.onclick = (): void => {
-        const blob: Blob = new Blob([sticky.innerText as string], { type: "text/plain; charset=utf-8" });
-
-        saveAs(blob, "minsticky.txt");
-    }
 
     //save syncing 
     let createFile: FileSystemFileHandle;
-    (document.getElementById('savesync') as HTMLElement).addEventListener('click', async () => {
+    save.addEventListener('click', async () => {
         try { 
             createFile = await (window).showSaveFilePicker({
                 suggestedName: 'minsticky.txt'
@@ -85,33 +81,70 @@ function stickies() {
         }
     });
 
+    //open syncing 
+    let fileHandle: FileSystemFileHandle;
+    const openFile = async () => {
+        open.addEventListener('click', async () => {
+            [fileHandle] = await showOpenFilePicker();
+            const file = await fileHandle.getFile();
+            const contents = await file.text();
+            (document.getElementById('sticky') as HTMLElement).innerText = contents;
+        });
+    }
+
+    (document.getElementById('sticky') as HTMLElement).addEventListener('keyup', async (e) => {
+        if(typeof fileHandle !== 'undefined') {
+            if((await fileHandle.queryPermission()) === 'granted') {
+                const writable: FileSystemWritableFileStream = await fileHandle.createWritable();
+                await writable.write(sticky.innerText as string);
+                await writable.close();
+            }
+        }
+    });
+
+    open.onclick = async () => {
+        await openFile();
+    }
+
+    //regular saving
+    saveas.onclick = (): void => {
+        const blob: Blob = new Blob([sticky.innerText as string], { type: "text/plain; charset=utf-8" });
+
+        saveAs(blob, "minsticky.txt");
+    }
+
     //disable drag for save button
-    (document.getElementById('save') as HTMLElement).onmousedown = () => { 
+    save.onmousedown = () => { 
         return false;
     };
 
-    //disable drag for save sync button
-    (document.getElementById('savesync') as HTMLElement).onmousedown = () => {
+    //disable drag for saveas button
+    saveas.onmousedown = () => { 
+        return false;
+    };
+
+    //disable drag for open button
+    open.onmousedown = () => {
         return false;
     }
 
     //disable drag for normal button
-    (document.getElementById('normal') as HTMLElement).onmousedown = () => {
+    normal.onmousedown = () => {
         return false;
     }
 
     //disable drag for bold button
-    (document.getElementById('bold') as HTMLElement).onmousedown = () => {
+    bold.onmousedown = () => {
         return false;
     }
 
     //disable drag for italic button
-    (document.getElementById('italic') as HTMLElement).onmousedown = () => {
+    italic.onmousedown = () => {
         return false;
     }
 
     //disable drag for underline button
-    (document.getElementById('underline') as HTMLElement).onmousedown = () => {
+    underline.onmousedown = () => {
         return false;
     }
 }
